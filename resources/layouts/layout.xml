@@ -1,0 +1,4 @@
+<layout id="WatchFace">
+    <label id="TimeHourLabel" x="center" y="center" font="Gfx.FONT_SYSTEM_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
+    <label id="TimeMinuteLabel" x="center" y="center" font="Gfx.FONT_SYSTEM_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_WHITE" />
+</layout>
