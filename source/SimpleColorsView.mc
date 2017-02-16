@@ -3,6 +3,8 @@ using Toybox.Graphics as Gfx;
 //using Toybox.System as Sys;
 //using Toybox.Lang as Lang;
 //using Toybox.Application as App;
+using Toybox.Time.Gregorian as Greg;
+using Toybox.Time as Time;
 
 class SimpleColorsView extends Ui.WatchFace {
 
@@ -23,7 +25,11 @@ class SimpleColorsView extends Ui.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
-		var color = Gfx.COLOR_GREEN;
+    	var colors = [Gfx.COLOR_GREEN, Gfx.COLOR_BLUE, Gfx.COLOR_PINK, Gfx.COLOR_YELLOW, Gfx.COLOR_ORANGE, Gfx.COLOR_LT_GRAY, Gfx.COLOR_RED];
+        
+    	var dateinfo = Greg.info(Time.now(), Time.FORMAT_SHORT);
+				
+		var color = colors[dateinfo.day_of_week-1];
 
 		var time = Util.getCurrentTime();
 
